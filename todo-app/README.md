@@ -1,59 +1,134 @@
 # TodoApp
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.27.
+TodoApp is an accessible task management application built with Angular 19. It demonstrates inclusive UI patterns, keyboard-first navigation, screen reader support, and customizable accessibility settings.
 
-## Development server
+## What this app does
 
-To start a local development server, run:
+- Manages tasks with create, edit, complete, delete, filter, sort, and search capabilities.
+- Displays a dashboard with task statistics and quick actions.
+- Stores tasks and settings in browser `localStorage` so data persists across refreshes.
+- Includes a dedicated Accessibility Center for personalized interaction settings.
 
-```bash
-ng serve
-```
+## Why this app is useful
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Serves as a strong example of accessible frontend development in Angular.
+- Helps teams learn how to implement keyboard navigation, live announcements, and accessible dialogs.
+- Supports users with vision, mobility, cognitive, or motion-sensitivity needs.
+- Works well as a prototype, portfolio project, or internal productivity tool.
 
-## Code scaffolding
+## Key accessibility features
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- `Skip to main content` link for screen reader and keyboard users.
+- Live region announcements for navigation and page updates.
+- Keyboard shortcuts for fast app navigation and task creation.
+- Accessible dialogs and form controls with ARIA labels and focus management.
+- Visual modes for high contrast, dark mode, large text, reduced motion, and dyslexia-friendly layouts.
+- Audio feedback and speech announcements with adjustable volume, rate, pitch, and language.
+- Focus announcement support and enhanced keyboard focus styles.
 
-```bash
-ng generate component component-name
-```
+## Where this application can be used
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- As a demo or training tool for inclusive web development.
+- In team tools or personal productivity apps where accessibility is a priority.
+- As a base to extend into a larger task manager, planner, or project tracker.
+- For usability testing with assistive technology users.
+- In design systems that need accessible baseline components.
 
-```bash
-ng generate --help
-```
+## How to use the app
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+1. Install dependencies:
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+2. Start the development server:
 
 ```bash
-ng e2e
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+3. Open your browser at:
 
-## Additional Resources
+```text
+http://localhost:4200/
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+4. Use the available features:
+
+- `Dashboard` for an overview of tasks, active counts, and overdue items.
+- `My Tasks` to create, search, filter, sort, and manage active tasks.
+- `Completed Tasks` to review finished work.
+- `Accessibility Center` to configure modes such as screen reader, high contrast, and reduced motion.
+- `Help` to view guidance and keyboard shortcuts.
+
+## Keyboard shortcuts
+
+- `Alt + D` — Open Dashboard
+- `Alt + T` — Open My Tasks
+- `Alt + C` — Open Completed Tasks
+- `Alt + S` — Open Settings
+- `Alt + A` — Open Accessibility Center
+- `Alt + H` — Open Help
+- `Alt + N` — Create a new task
+- `Alt + F` — Focus search input
+- `?` — Toggle the keyboard shortcut guide
+- `Delete` — Delete the selected task
+- `Escape` — Close the active dialog
+
+## Project structure
+
+- `src/app/features` — feature pages like dashboard, tasks, completed tasks, settings, help, and accessibility center.
+- `src/app/shared/components` — reusable accessible UI components including dialogs, form fields, search, notifications, tabs, and task cards.
+- `src/app/core` — shared services for announcements, audio feedback, notifications, speech, and live regions.
+- `src/app/stores` — state management for tasks and accessibility settings.
+- `src/app/directives` — custom directives for focus and keyboard behavior.
+
+## Improvements to consider
+
+- Add backend authentication and multi-user support.
+- Add unit tests and E2E tests to validate accessibility workflows.
+- Add PWA support for offline use and installability.
+- Add categories, tags, reminders, and calendar integration.
+- Improve mobile responsiveness and adaptive layouts.
+- Add localization for more languages and translated UI content.
+- Add voice commands or smarter assistive interactions.
+- Add analytics or reporting features for task habits.
+
+## Build and run commands
+
+- Install dependencies:
+
+```bash
+npm install
+```
+
+- Run locally:
+
+```bash
+npm start
+```
+
+- Build for production:
+
+```bash
+npm run build
+```
+
+- Run unit tests:
+
+```bash
+npm test
+```
+
+- Serve SSR output:
+
+```bash
+npm run serve:ssr:todo-app
+```
+
+## Notes
+
+- The app uses Angular standalone components and modern reactive patterns.
+- Data is persisted locally in the browser, so tasks and accessibility preferences remain across page refreshes.
+- This repository is a good foundation for building an accessible task manager or productivity application.
